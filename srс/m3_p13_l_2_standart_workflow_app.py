@@ -35,8 +35,8 @@ def del_movies(conn_):
     sql3 = "DELETE FROM movies WHERE id > 3"
     cursor = conn_.cursor()
     cursor.execute(sql3)
-    cursor.close()
     conn_.commit()  # Коммитим, т.е. сохраняем изменения в БД
+    cursor.close()
 
 # END
 
